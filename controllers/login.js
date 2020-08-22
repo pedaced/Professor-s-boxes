@@ -8,8 +8,6 @@ exports.authenticate = (req, res, next) => {
     let username = req.body.username;
     let passwd = req.body.password;
 
-    let string = 'pedram' + ' ahmadiyeh';
-    console.log(string);
     models.Faculty.findOne({
         where: {
             username: username

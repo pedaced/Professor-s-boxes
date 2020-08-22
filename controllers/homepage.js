@@ -3,21 +3,30 @@ var facultyId = 0;
 var facultyName = '';
 
 exports.generate = (req, res, next) => {
-    let welcome = `پنل مدیریت ${req.query.faculty}`;
-    //res.send(welcome);
-    facultyId = req.params.id;
-    console.log(facultyId);
-    facultyName = req.query.faculty;
-    // for(let i = 1; i < 10; i++) {
-    //     models.Box.create({
-    //         id: 9*facultyId + i - 9,
-    //         facultyId: facultyId,
-    //     }).then(result => console.log('box 1 created')).catch(err => console.log(err));
-    // }
+    console.log('reached here');
+    res.sendFile('homepage.html', {root: './public'});
+}
+
+exports.get_boxes = (req, res, next) => {
+    let id = req.query.id;
+
+    resp = {};
+    resp['box'] = [];
+
     models.Box.findAll({
+        where: {
+            facultyId: id
+        }
     }).then(box => {
-        res.send(box);
-    })
+        // let obj = {};
+        // let boxId = box.id % 9 === 0 ? 9 : box.id % 9; 
+        // obj['id'] = boxId;
+        // obj['prof'] = box.professor;
+        // obj['email'] = box.email;
+        // obj['mobileNo'] = box.mobileNo;
+        // resp['box'].push()
+        res.json(box);
+    }).catch(err => res.send(err));
 }
 
 exports.edit = (req, res, next) => {

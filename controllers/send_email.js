@@ -1,3 +1,4 @@
+const { Op } = require('sequelize');
 const models = require('../models');
 const nodemailer = require('nodemailer');
 
@@ -39,14 +40,14 @@ exports.send_email = (req, res, next) => {
                     rejectUnauthorized: false
                 },
                 auth: {
-                   user: reciever,
-                   pass: 'Sin50+0.76'
+                   user: sender,
+                   pass: senderPass
                 }
             });
 
             const message = {
-                from: reciever, 
-                to: sender,         
+                from: sender, 
+                to: reciever,         
                 subject: 'باکس اساتید',
                 text: 'آیتم جدیدی در باکس مربوط به شما قرار گرفت.'
             };
@@ -55,6 +56,7 @@ exports.send_email = (req, res, next) => {
                   console.log(err)
                 } else {
                   console.log('sent email');
+                  res.sendStatus(200);
                 }
             });
         }).catch(err => console.log(err));

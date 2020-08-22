@@ -1,0 +1,41 @@
+body {
+    background-color: red;
+}
+* {
+    font-family: "B Nazanin";
+    font-weight: bold;
+}
+.title {
+    border-bottom: 1px solid #dcdcdc;
+}
+.container {
+    display: block;
+    padding: 1%;
+
+}
+
+.sign-out button{
+    float: left;
+    margin: 1%;
+    font-size: 20px;
+}
+
+.modal .btn {
+    font-size: 20px;
+    color: white;
+    /* background-color: #7FFF00; */
+    width: 30%;
+    height: 40%;
+}
+
+.md-form {
+    display: inline;
+}
+
+.modal .row {
+    margin: 5%;
+}
+
+.modal .row .col-4 {
+    float: right;
+}

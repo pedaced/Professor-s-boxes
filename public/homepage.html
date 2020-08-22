@@ -1,0 +1,570 @@
+<!DOCTYPE HTML>
+<html dir="rtl">
+	<head>
+		<title>ورود</title>
+    <script src="jquery/jquery-3.2.1.min.js"></script>
+		<link rel="stylesheet" href="stylesheets/homepage.css">
+		<link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap.min.css">
+		<script src="javascripts/homepage.js"></script>
+		<script src="bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
+    
+	</head>
+<body class="text-center">
+    <div class="container title">
+        <div class="row">
+            <div class="col-6">
+                <h2 id="welcome">پنل مدیریت باکس اساتید دانشکده مهندسی کامپیوتر</h2>
+            </div>
+            <div class="col-6 sign-out justify-content-end">
+              <button class="btn btn-danger" onclick="logout()">خروج</button>
+              <button class="btn btn-success" onclick="refresh()  ">بروزرسانی</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">شماره باکس</th>
+              <th scope="col">استاد</th>
+              <th scope="col">ایمیل</th>
+              <th scope="col">شماره موبایل</th>
+              <th scope="col">ویرایش</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#editForm1">ویرایش</button>
+                <div class="modal fade" id="editForm1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header text-center">
+                      <h4 class="modal-title w-100 font-weight-bold">اطلاعات باکس شماره 1</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                      <div class="md-form mb-5">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">نام استاد:</label>
+                          </div>
+                          <div class="col-8">
+                            <input id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="md-form mb-5">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">ایمیل:</label>
+                          </div>
+                          <div class="col-8">
+                            <input type="email" id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="md-form mb-4">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">شماره موبایل:</label>
+                          </div>
+                          <div class="col-8">
+                            <input id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                      <button class="btn btn-success" id="1" onclick="edit()" data-dismiss="modal">ثبت</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#editForm2">ویرایش</button>
+                <div class="modal fade" id="editForm2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header text-center">
+                      <h4 class="modal-title w-100 font-weight-bold">اطلاعات باکس شماره 2</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                      <div class="md-form mb-5">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">نام استاد:</label>
+                          </div>
+                          <div class="col-8">
+                            <input id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="md-form mb-5">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">ایمیل:</label>
+                          </div>
+                          <div class="col-8">
+                            <input type="email" id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="md-form mb-4">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">شماره موبایل:</label>
+                          </div>
+                          <div class="col-8">
+                            <input id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                      <button class="btn btn-success" id="2" onclick="edit()" data-dismiss="modal">ثبت</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#editForm3">ویرایش</button>
+                <div class="modal fade" id="editForm3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header text-center">
+                      <h4 class="modal-title w-100 font-weight-bold">اطلاعات باکس شماره 3</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                      <div class="md-form mb-5">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">نام استاد:</label>
+                          </div>
+                          <div class="col-8">
+                            <input id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="md-form mb-5">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">ایمیل:</label>
+                          </div>
+                          <div class="col-8">
+                            <input id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="md-form mb-4">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">شماره موبایل:</label>
+                          </div>
+                          <div class="col-8">
+                            <input id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                      <button class="btn btn-success" id="3" onclick="edit()" data-dismiss="modal">ثبت</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </td>
+            </tr><tr>
+              <th scope="row">4</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#editForm4">ویرایش</button>
+                <div class="modal fade" id="editForm4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header text-center">
+                      <h4 class="modal-title w-100 font-weight-bold">اطلاعات باکس شماره 4</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                      <div class="md-form mb-5">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">نام استاد:</label>
+                          </div>
+                          <div class="col-8">
+                            <input id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="md-form mb-5">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">ایمیل:</label>
+                          </div>
+                          <div class="col-8">
+                            <input type="email" id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="md-form mb-4">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">شماره موبایل:</label>
+                          </div>
+                          <div class="col-8">
+                            <input id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                      <button class="btn btn-success" id="4" onclick="edit()" data-dismiss="modal">ثبت</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </td>
+            </tr><tr>
+              <th scope="row">5</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#editForm5">ویرایش</button>
+                <div class="modal fade" id="editForm5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header text-center">
+                      <h4 class="modal-title w-100 font-weight-bold">اطلاعات باکس شماره 5</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                      <div class="md-form mb-5">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">نام استاد:</label>
+                          </div>
+                          <div class="col-8">
+                            <input id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="md-form mb-5">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">ایمیل:</label>
+                          </div>
+                          <div class="col-8">
+                            <input type="email" id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="md-form mb-4">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">شماره موبایل:</label>
+                          </div>
+                          <div class="col-8">
+                            <input id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                      <button class="btn btn-success" id="5" onclick="edit()" data-dismiss="modal">ثبت</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </td>
+            </tr><tr>
+              <th scope="row">6</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#editForm6">ویرایش</button>
+                <div class="modal fade" id="editForm6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header text-center">
+                      <h4 class="modal-title w-100 font-weight-bold">اطلاعات باکس شماره 6</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                      <div class="md-form mb-5">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">نام استاد:</label>
+                          </div>
+                          <div class="col-8">
+                            <input id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="md-form mb-5">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">ایمیل:</label>
+                          </div>
+                          <div class="col-8">
+                            <input type="email" id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="md-form mb-4">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">شماره موبایل:</label>
+                          </div>
+                          <div class="col-8">
+                            <input id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                      <button class="btn btn-success" id="6" onclick="edit()" data-dismiss="modal">ثبت</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </td>
+            </tr><tr>
+              <th scope="row">7</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#editForm7">ویرایش</button>
+                <div class="modal fade" id="editForm7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header text-center">
+                      <h4 class="modal-title w-100 font-weight-bold">اطلاعات باکس شماره 7</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                      <div class="md-form mb-5">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">نام استاد:</label>
+                          </div>
+                          <div class="col-8">
+                            <input id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="md-form mb-5">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">ایمیل:</label>
+                          </div>
+                          <div class="col-8">
+                            <input type="email" id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="md-form mb-4">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">شماره موبایل:</label>
+                          </div>
+                          <div class="col-8">
+                            <input id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                      <button class="btn btn-success" id="7" onclick="edit()" data-dismiss="modal">ثبت</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </td>
+            </tr><tr>
+              <th scope="row">8</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#editForm8">ویرایش</button>
+                <div class="modal fade" id="editForm8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header text-center">
+                      <h4 class="modal-title w-100 font-weight-bold">اطلاعات باکس شماره 8</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                      <div class="md-form mb-5">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">نام استاد:</label>
+                          </div>
+                          <div class="col-8">
+                            <input id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="md-form mb-5">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">ایمیل:</label>
+                          </div>
+                          <div class="col-8">
+                            <input type="email" id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="md-form mb-4">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">شماره موبایل:</label>
+                          </div>
+                          <div class="col-8">
+                            <input id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                      <button class="btn btn-success" id="8" onclick="edit()" data-dismiss="modal">ثبت</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </td>
+            </tr><tr>
+              <th scope="row">9</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#editForm9">ویرایش</button>
+                <div class="modal fade" id="editForm9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header text-center">
+                      <h4 class="modal-title w-100 font-weight-bold">اطلاعات باکس شماره ۹</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                      <div class="md-form mb-5">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">نام استاد:</label>
+                          </div>
+                          <div class="col-8">
+                            <input id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="md-form mb-5">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">ایمیل:</label>
+                          </div>
+                          <div class="col-8">
+                            <input type="email" id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="md-form mb-4">
+                        <div class="row">
+                          <div class="col-4">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">شماره موبایل:</label>
+                          </div>
+                          <div class="col-8">
+                            <input id="orangeForm-pass" class="form-control validate">
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                      <button class="btn btn-success" id="9" onclick="edit()" data-dismiss="modal">ثبت</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
+      
+    </div>
+    
+  </body>
+</html>
