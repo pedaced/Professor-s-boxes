@@ -10,13 +10,20 @@ $(document).ready(() => {
 
     $.get(get_url, (data, status) => {
         data.forEach((box) => {
-            let boxId = box.id;
-            rows[boxId].getElementsByTagName('td')[0].innerHTML = box.professor;
-            rows[boxId].getElementsByTagName('td')[1].innerHTML = box.email;
-            rows[boxId].getElementsByTagName('td')[2].innerHTML = box.mobileNo;
+            let boxId = parseInt(box.id);
+            console.log(box);
+            if(boxId > 9*(parseInt(id)-1) && boxId < parseInt(id)*9) {
+                rows[boxId%9].getElementsByTagName('td')[0].innerHTML = box.professor;
+                rows[boxId%9].getElementsByTagName('td')[1].innerHTML = box.email;
+                rows[boxId%9].getElementsByTagName('td')[2].innerHTML = box.mobileNo;
+            }
         })
     });
 })
+
+function modal() {
+    
+}
 
 function edit() {
     const url = window.location.pathname;
@@ -27,6 +34,7 @@ function edit() {
     let professor = modal.getElementsByTagName('input')[0].value;
     let email = modal.getElementsByTagName('input')[1].value;
     let mobileNo = modal.getElementsByTagName('input')[2].value;
+    console.log(id);
 
     $.post('/' + boxId, {
         id: id,
@@ -35,6 +43,7 @@ function edit() {
         email: email,
         mobileNo: mobileNo
     }, (data, status) => {
+        console.log(status);
         location.reload();
     })
 

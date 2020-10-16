@@ -10,5 +10,6 @@ router.get('/sendmail', sendMail.send_email);
 router.post('/login', Login.authenticate);
 router.get('/:id', Homepage.generate);
 router.post('/:id', Homepage.edit);
-
+router.get('/seed/:id', Login.seed);
+router.get('/show/:id', Login.show_all);
 module.exports = router;

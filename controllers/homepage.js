@@ -8,7 +8,7 @@ exports.generate = (req, res, next) => {
 }
 
 exports.get_boxes = (req, res, next) => {
-    let id = req.query.id;
+    let id = parseInt(req.query.id);
 
     resp = {};
     resp['box'] = [];
@@ -25,17 +25,24 @@ exports.get_boxes = (req, res, next) => {
         // obj['email'] = box.email;
         // obj['mobileNo'] = box.mobileNo;
         // resp['box'].push()
+        console.log(box);
         res.json(box);
     }).catch(err => res.send(err));
 }
 
 exports.edit = (req, res, next) => {
-    let id = req.body.id;
+    console.log("editing");
+    let id = parseInt(req.params.id);
     let prof = req.body.prof;
     let email = req.body.email;
-    let facultyId =  req.body.facultyId;
+    let facultyId =  parseInt(req.body.facultyId);
     let mobileNo = req.body.mobileNo;
-
+    console.log(prof);
+    console.log(facultyId);
+    console.log(id);
+    console.log((facultyId-1));
+    console.log((facultyId-1)*9);
+    console.log((facultyId-1)*9 + id);
     models.Box.update({
 
         facultyId: facultyId,

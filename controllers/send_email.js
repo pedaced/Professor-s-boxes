@@ -53,12 +53,12 @@ exports.send_email = (req, res, next) => {
             };
             transport.sendMail(message, function(err, info) {
                 if (err) {
-                  console.log(err)
+                  console.log(err);
                 } else {
                   console.log('sent email');
                   res.sendStatus(200);
                 }
             });
         }).catch(err => console.log(err));
-    }).catch(err => console.log(err));
+    }).catch(console.log('hello'));
 }
